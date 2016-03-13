@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+i.bintang {
+  cursor: pointer;
+  color: black
+}
+i.bintangin {
+  color: yellow
+}
+</style>
+
+<!-- id = id artikel, blog, post dll yang ada di database -->
+<div id="1" class="anu" data-bintangin="3"></div>
+<div id="2" class="anu" data-bintangin="1"></div>
+<div id="3" class="anu" data-bintangin="0"></div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="bintangin.js"></script>
+<script>
+// Install by ClassName
+$(document).ready(function(){
+  $(".anu").bintangin(
+    save = "http://anu.kom/post/update.php", // url untuk mengupdate rate bintang ke database menggunakan method POST dengan 3 parameter yaitu postid, rate & visitor
+    visitor = "otong", // by user id, name or ipaddress
+    message = "bintang"
+  );
+});
+</script>
